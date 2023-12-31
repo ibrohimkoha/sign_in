@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{% block content %}
+<form method="POST">
+    <h6>Saytga kirish </h6>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Kirish">
+</form>
+<a href="{% url 'signup'%}" class="btn btn-primary">Ro'yhatdan o'tish</a>
+{% endblock content %}
